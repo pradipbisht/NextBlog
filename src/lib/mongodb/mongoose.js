@@ -4,8 +4,9 @@ let initialized = false;
 
 export const connect = async () => {
   mongoose.set("strictQuery", true);
-  if (!initialized) {
-    console.log("Already Connected to mongodb");
+  if (initialized) {
+    console.log("Already connected to MongoDB");
+    return;
   }
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
