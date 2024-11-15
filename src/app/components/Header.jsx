@@ -6,6 +6,8 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { dark, light } from "@clerk/themes";
 
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -56,9 +58,20 @@ export default function Header() {
             <FaMoon className="text-xl" />
           )}
         </Button>
-        <Link href="/sign-in">
-          <Button className="text-xs md:text-sm lg:text-base">Sign In</Button>
-        </Link>
+        <SignedIn>
+          <UserButton
+            appearance={{
+              baseTheme: theme === "light" ? light : dark,
+            }}
+          />
+        </SignedIn>
+        <SignedOut>
+          <Link href="/sign-in">
+            <Button gradientDuoTone="purpleToBlue" outline>
+              Sign In
+            </Button>
+          </Link>
+        </SignedOut>
         <Navbar.Toggle />
       </div>
 
