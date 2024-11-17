@@ -10,16 +10,15 @@ const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 // https://dev.to/a7u/reactquill-with-nextjs-478b
 import "react-quill-new/dist/quill.snow.css";
 
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import {
   getDownloadURL,
   getStorage,
   ref,
   uploadBytesResumable,
 } from "firebase/storage";
-
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import { app } from "@/firebase";
+import { app } from "../../../../firebase";
 
 export default function CreatePostPage() {
   const { isSignedIn, user, isLoaded } = useUser();
