@@ -18,7 +18,7 @@ import {
   ref,
   uploadBytesResumable,
 } from "firebase/storage";
-import { app } from "../../../../firebase";
+import { app } from "@/firebase";
 
 export default function CreatePostPage() {
   const { isSignedIn, user, isLoaded } = useUser();

@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useRouter, usePathname } from "next/navigation";
-import { app } from "../../../../firebase";
+import { app } from "@/firebase";
 
 export default function UpdatePost() {
   const { isSignedIn, user, isLoaded } = useUser();
