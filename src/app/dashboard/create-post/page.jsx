@@ -19,6 +19,7 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { app } from "@/firebase";
+import Image from "next/image";
 
 export default function CreatePostPage() {
   const { isSignedIn, user, isLoaded } = useUser();
@@ -159,7 +160,7 @@ export default function CreatePostPage() {
             <Alert color="failure">{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <img
+            <Image
               src={formData.image}
               alt="upload"
               className="w-full h-72 object-cover"

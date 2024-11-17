@@ -12,16 +12,16 @@ export default function About() {
 
         {/* Centered Paragraph */}
         <p className="text-lg sm:text-xl mb-6 dark:text-gray-100 mx-auto max-w-2xl">
-          Hello! I’m Pradip Bisht, a passionate MERN Stack Developer who
+          Hello! I&apos;m Pradip Bisht, a passionate MERN Stack Developer who
           specializes in front-end technologies (React) and back-end development
           (Node.js). I started learning through resources like Udemy and
-          YouTube, and I’ve practiced my skills by building several projects. I
-          am constantly evolving as a developer, and I'm excited to learn more
-          and take on new challenges.
+          YouTube, and I&apos;ve practiced my skills by building several
+          projects. I am constantly evolving as a developer, and I&apos;m
+          excited to learn more and take on new challenges.
         </p>
 
         <p className="text-md sm:text-lg mb-6 dark:text-gray-100">
-          <strong>Email:</strong>{" "}
+          <strong>Email:</strong>
           <a
             href="mailto:pradipbisht007@gmail.com"
             className="text-teal-500 hover:underline dark:text-gray-100">

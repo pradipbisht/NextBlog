@@ -1,6 +1,7 @@
 import CallToAction from "@/app/components/CallToAction";
 import RecentPosts from "@/app/components/RecentPosts";
 import { Button } from "flowbite-react";
+import Image from "next/image";
 import Link from "next/link";
 export default async function PostPage({ params }) {
   let post = null;
@@ -36,7 +37,7 @@ export default async function PostPage({ params }) {
           {post && post.category}
         </Button>
       </Link>
-      <img
+      <Image
         src={post && post.image}
         alt={post && post.title}
         className="mt-10 p-3 max-h-[600px] w-full object-cover"

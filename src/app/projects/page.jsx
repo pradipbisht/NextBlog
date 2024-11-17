@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -38,7 +39,7 @@ export default function Project() {
             <div
               key={index}
               className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-              <img
+              <Image
                 src={project.imageUrl}
                 alt={project.name}
                 className="w-full h-48 object-cover"

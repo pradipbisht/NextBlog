@@ -4,6 +4,7 @@ import { Button, Modal, Table } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
+import Image from "next/image"; // Import Image from next/image
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 export default function DashPosts() {
@@ -101,10 +102,12 @@ export default function DashPosts() {
                     </Table.Cell>
                     <Table.Cell>
                       <Link href={`/post/${post.slug}`}>
-                        <img
+                        <Image
                           src={post.image}
                           alt={post.title}
-                          className="w-20 h-10 object-cover bg-gray-500"
+                          width={80} // Adjust as needed
+                          height={40} // Adjust as needed
+                          className="object-cover bg-gray-500"
                         />
                       </Link>
                     </Table.Cell>

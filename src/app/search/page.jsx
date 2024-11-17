@@ -15,14 +15,16 @@ export default function Search() {
   const [loading, setLoading] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams(); // searchParams hook
   const router = useRouter();
 
+  // Update the effect to listen to changes in searchParams directly
   useEffect(() => {
     const searchTermFromUrl = searchParams.get("searchTerm") || "";
     const sortFromUrl = searchParams.get("sort") || "desc";
     const categoryFromUrl = searchParams.get("category") || "uncategorized";
 
+    // Set the sidebar data based on the URL parameters
     setSidebarData({
       searchTerm: searchTermFromUrl,
       sort: sortFromUrl,
@@ -58,7 +60,7 @@ export default function Search() {
     };
 
     fetchPosts();
-  }, [searchParams.toString()]);
+  }, [searchParams]); // Now using searchParams as dependency directly
 
   const handleChange = (e) => {
     const { id, value } = e.target;

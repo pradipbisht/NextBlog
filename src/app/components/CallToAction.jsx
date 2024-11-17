@@ -14,7 +14,7 @@ const quotes = [
     author: "Winston Churchill",
   },
   {
-    content: "Believe you can and you're halfway there.",
+    content: "Believe you can and you&apos;re halfway there.",
     author: "Theodore Roosevelt",
   },
   {
@@ -27,11 +27,11 @@ const quotes = [
     author: "C.S. Lewis",
   },
   {
-    content: "Opportunities don't happen, you create them.",
+    content: "Opportunities don&apos;t happen, you create them.",
     author: "Chris Grosser",
   },
   {
-    content: "Don't watch the clock; do what it does. Keep going.",
+    content: "Don&apos;t watch the clock; do what it does. Keep going.",
     author: "Sam Levenson",
   },
   {
@@ -45,7 +45,7 @@ const quotes = [
     author: "Eleanor Roosevelt",
   },
   {
-    content: "It always seems impossible until it's done.",
+    content: "It always seems impossible until it&apos;s done.",
     author: "Nelson Mandela",
   },
 ];
@@ -64,7 +64,7 @@ export default function CallToAction() {
   return (
     <div className="p-6 w-full h-auto max-w-full flex flex-col justify-center items-center">
       <h1 className="text-3xl font-semibold text-gray-800 dark:text-gray-100 text-center">
-        "{content}"
+        &quot;{content}&quot;
       </h1>
       <p className="text-lg text-gray-600 dark:text-gray-400 mt-4 text-center uppercase">
         - {author}

@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 export default function PostCard({ post }) {
   return (
     <div className="group relative w-full border border-teal-500 hover:border-2 h-[400px] overflow-hidden rounded-lg sm:w-[430px] transition-all">
       <Link href={`/post/${post.slug}`}>
-        <img
+        <Image
           src={post.image}
           alt="post cover"
           placeholder="blur"
