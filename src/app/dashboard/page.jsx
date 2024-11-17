@@ -6,7 +6,7 @@ import DashProfile from "../components/DashProfile";
 import { useSearchParams } from "next/navigation";
 import DashPosts from "../components/DashPosts";
 import DashUsers from "../components/DashUsers";
-import DashboardComp from "../components/Dashboradcomp";
+import DashboardComp from "../components/DashboardComp";
 export default function Dashboard() {
   const searchParams = useSearchParams();
   const [tab, setTab] = useState("");
