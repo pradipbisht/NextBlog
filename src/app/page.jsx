@@ -33,16 +33,8 @@ export default async function Home() {
           </a>
           .
         </p>
-        <Link
-          href="/search"
-          className="mt-8 dark:text-gray-100 block text-center text-md text-teal-600 font-bold hover:underline hover:text-teal-700 transition-all">
-          Discover More Posts
-        </Link>
       </div>
 
-      <div className="p-3 w-full items-center">
-        <CallToAction />
-      </div>
       <div className="p-3 flex flex-col gap-8 py-7">
         <RecentPosts limit={9} />
         <Link
@@ -50,6 +42,9 @@ export default async function Home() {
           className="text-lg text-teal-500 hover:underline text-center">
           View all posts
         </Link>
+      </div>
+      <div className="p-3 w-full items-center">
+        <CallToAction />
       </div>
     </div>
   );
