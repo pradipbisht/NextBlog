@@ -5,7 +5,7 @@ import { currentUser } from "@clerk/nextjs/server";
 export const DELETE = async (req) => {
   const user = await currentUser();
   try {
-    await connect;
+    await connect();
     const data = await req?.json();
     if (
       !user.publicMetadata.isAdmin ||
